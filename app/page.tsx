@@ -196,7 +196,7 @@ export default function Home() {
             ))}
           </select>
         </div>
-        <div className="py-8 px-4 mx-auto max-w-screen-xl text-center lg:pb-16 lg:px-12 relative">
+        <div className="py-8 px-4 mx-auto text-center lg:pb-16 lg:px-12 relative">
 
 
           {/* Logo */}
@@ -222,8 +222,8 @@ export default function Home() {
           <div className={` ${montserrat.className} px-4 mx-auto text-center uppercase`}
           >
             <span className="mont font-semibold text-gray-400">Meie Kliendid:</span>
-            <div className={`flex flex-wrap justify-center items-center mt-8 text-gray-500 sm:justify-between gap-4 `}>
-              <a href="https://www.tv3.ee/" target="_blank" className="mr-5 mb-5 lg:mb-0  hover:text-gray-400">
+            <div className={`flex flex-wrap justify-center mt-8 text-gray-500 sm:justify-between gap-4 `}>
+              <a href="https://www.tv3.ee/" target="_blank" className="mr-5 mb-5 lg:mb-0  hover:text-gray-400 inline-block">
 
                 <Image
                   src={"./img/logos/tv3.svg"}
@@ -233,7 +233,7 @@ export default function Home() {
                   alt="TV 3 kanal"
                 ></Image>
               </a>
-              <a href="https://www.astrazeneca.com/" target="_blank" className="mr-5 mb-5 lg:mb-0  hover:text-gray-400">
+              <a href="https://www.astrazeneca.com/" target="_blank" className="mr-5 mb-5 lg:mb-0  hover:text-gray-400 inline-block">
                 <Image
                   src={"./img/logos/astra.svg"}
                   className={`lg:h-[100px] h-[50px] w-full transition-all duration-300 hover:grayscale-0 a ${selectedVariant.clientFilter}`}
@@ -242,7 +242,7 @@ export default function Home() {
                   alt="Astra"
                 />
               </a>
-              <a href="https://www.bonava.ee/" target="_blank" className="mr-5 mb-5 lg:mb-0  hover:text-gray-400 text-4xl">
+              <a href="https://www.bonava.ee/" target="_blank" className="mr-5 mb-5 lg:mb-0  hover:text-gray-400 inline-block">
                 <Image
                   src={"./img/logos/bonova.svg"}
                   className={`lg:h-[100px] h-[50px] w-full transition-all duration-300 hover:grayscale-0 a ${selectedVariant.clientFilter}`}
@@ -251,7 +251,7 @@ export default function Home() {
                   alt="Astra"
                 />
               </a>
-              <a href="https://skechers.ee" target="_blank" className="mr-5 mb-5 lg:mb-0  hover:text-gray-400 text-4xl">
+              <a href="https://skechers.ee" target="_blank" className="mr-5 mb-5 lg:mb-0  hover:text-gray-400 inline-block">
                 <Image
                   src={"./img/logos/skechers.svg"}
                   className={`lg:h-[100px] h-[50px] w-full transition-all duration-300 hover:grayscale-0 a ${selectedVariant.clientFilter}`}
@@ -260,9 +260,18 @@ export default function Home() {
                   alt="Astra"
                 />
               </a>
-              <a href="https://www.excellent.ee/" target="_blank" className="mr-5 mb-5 lg:mb-0  hover:text-gray-400 text-4xl">
+              <a href="https://www.excellent.ee/" target="_blank" className="mr-5 mb-5 lg:mb-0  hover:text-gray-400 inline-block">
                 <Image
                   src={"./img/logos/exc.svg"}
+                  className={`lg:h-[100px] h-[50px] w-full transition-all duration-300 hover:grayscale-0 a ${selectedVariant.clientFilter}`}
+                  width={475}
+                  height={42}
+                  alt="Astra"
+                />
+              </a>
+              <a href="https://www.jcdecaux.ee/en" target="_blank" className="mr-5 mb-5 lg:mb-0  hover:text-gray-400 inline-block">
+                <Image
+                  src={"./img/logos/jcdecaux.svg"}
                   className={`lg:h-[100px] h-[50px] w-full transition-all duration-300 hover:grayscale-0 a ${selectedVariant.clientFilter}`}
                   width={475}
                   height={42}
@@ -303,7 +312,7 @@ export default function Home() {
       <section className={`${karla.className} p-8 text-center max-w-screen-lg mx-auto lg:py-16`}>
         <h2 className={` ${montserrat.className} text-4xl font-semibold text-slate-800 mb-8`}>Meie Teenused</h2>
         <div className="grid md:grid-cols-3 gap-6 mt-4">
-          <div className=" rounded-lg shadow-lg overflow-hidden">
+          <div className=" shadow-lg overflow-hidden">
             <Image
               src={"/img/banquet.jpg"}
               width={1200}
@@ -316,7 +325,7 @@ export default function Home() {
             </div>
           </div>
 
-          <div className="  rounded-lg shadow-lg overflow-hidden">
+          <div className="   shadow-lg overflow-hidden">
             <Image
               src={"/img/wedding.jpg"}
               width={1200}
@@ -328,7 +337,7 @@ export default function Home() {
               <p className="mt-2">Teie erilise päeva unustamatuks muutmine laitmatu planeerimisega.</p>
             </div>
           </div>
-          <div className="rounded-lg shadow-lg overflow-hidden">
+          <div className=" shadow-lg overflow-hidden">
             <Image
               src={"/img/events.jpg"}
               width={1200}
