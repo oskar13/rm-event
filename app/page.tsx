@@ -67,32 +67,32 @@ const logoVariants = [
   },
   {
     id: "alternative",
-   
+
     logoSrc: "/img/logos/rmevent7_solo_light.svg",
   },
   {
     id: "alternative2",
-   
+
     logoSrc: "/img/logos/rmevent7_solo_light2.svg",
   },
   {
     id: "simple light",
-   
+
     logoSrc: "/img/logos/rmevent_simple_solo_light.svg",
   },
   {
     id: "simple dark",
-   
+
     logoSrc: "/img/logos/rmevent_simple_solo_dark.svg",
   },
   {
     id: "simple light umbrella",
-   
+
     logoSrc: "/img/logos/rmevent_simple_solo_light_umbrella.svg",
   },
   {
     id: "simple dark umbrella",
-   
+
     logoSrc: "/img/logos/rmevent_simple_solo_dark_umbrella.svg",
   }
 ];
@@ -106,12 +106,12 @@ export default function Home() {
     <main>
 
 
-<section className={`${selectedVariant.bgClass} transition-all duration-500 relative`}>
-  <div id="noise-wrapper" className="absolute inset-0 bg-[url(/img/noise.svg)] opacity-25 brightness-100 contrast-150">
-  </div>
-      <div className="py-8 px-4 mx-auto max-w-screen-xl text-center lg:pb-16 lg:px-12">
+      <section className={`${selectedVariant.bgClass} transition-all duration-500 relative`}>
+        <div id="noise-wrapper" className="absolute inset-0 bg-[url(/img/noise.svg)] opacity-25 brightness-100 contrast-150">
+        </div>
+
         {/* Dropdown Menu */}
-        <div className="absolute top-4 right-4">
+        <div className="absolute top-4 right-4 z-10">
           <h2 className="inline-block text-white font-semibold text-lg">Taust:</h2>
           <br />
           <select
@@ -129,10 +129,10 @@ export default function Home() {
           </select>
         </div>
 
-                {/* Dropdown Menu */}
-                <div className="absolute top-24 right-4">
-                <h2 className="inline-block text-white font-semibold text-lg">Logo:</h2>
-                <br />
+        {/* Dropdown Menu */}
+        <div className="absolute top-24 right-4 z-10">
+          <h2 className="inline-block text-white font-semibold text-lg">Logo:</h2>
+          <br />
           <select
             className="p-2 bg-white text-black rounded-md shadow-md cursor-pointer"
             value={selectedLogoVariant.id}
@@ -147,71 +147,73 @@ export default function Home() {
             ))}
           </select>
         </div>
-
-        {/* Logo */}
-        <Image
-          className="w-full max-w-96 mx-auto mb-8"
-          src={selectedLogoVariant.logoSrc}
-          alt="RM Events Logo"
-          width={100}
-          height={100}
-        />
-
-        {/* Heading */}
-        <h1 className={`mb-4 text-4xl font-semibold tracking-tight leading-none md:text-5xl lg:text-6xl ${selectedVariant.textColor}`}>
-          Teie idee, meie teostus.
-        </h1>
-
-        {/* Subheading */}
-        <p className="mb-8 text-lg font-normal lg:text-xl sm:px-16 xl:px-48 text-gray-400">
-          Muudame teie visiooni tegelikkuseks läbi professionaalse planeerimise, täpse koordineerimise ja laitmatu elluviimise.
-        </p>
+        <div className="py-8 px-4 mx-auto max-w-screen-xl text-center lg:pb-16 lg:px-12 relative">
 
 
-        <div className={` ${montserrat.className} px-4 mx-auto text-center uppercase`}
+          {/* Logo */}
+          <Image
+            className="w-full max-w-96 mx-auto mb-8"
+            src={selectedLogoVariant.logoSrc}
+            alt="RM Events Logo"
+            width={100}
+            height={100}
+          />
+
+          {/* Heading */}
+          <h1 className={`mb-4 text-4xl font-semibold tracking-tight leading-none md:text-5xl lg:text-6xl ${selectedVariant.textColor}`}>
+            Teie idee, meie teostus.
+          </h1>
+
+          {/* Subheading */}
+          <p className="mb-8 text-lg font-normal lg:text-xl sm:px-16 xl:px-48 text-gray-400">
+            Muudame teie visiooni tegelikkuseks läbi professionaalse planeerimise, täpse koordineerimise ja laitmatu elluviimise.
+          </p>
+
+
+          <div className={` ${montserrat.className} px-4 mx-auto text-center uppercase`}
           >
             <span className="mont font-semibold text-gray-400">Meie Kliendid:</span>
             <div className="flex flex-wrap justify-center items-center mt-8 text-gray-500 sm:justify-between gap-4">
-              <a href="https://www.tv3.ee/" className="mr-5 mb-5 lg:mb-0  hover:text-gray-400">
+              <a href="https://www.tv3.ee/" target="_blank" className="mr-5 mb-5 lg:mb-0  hover:text-gray-400">
 
                 <Image
-                src={"./img/logos/tv3.svg"}
-                width={512}
-                height={943}
-                className="lg:h-[100px] h-[50px] w-full"
-                alt="TV 3 kanal"
+                  src={"./img/logos/tv3.svg"}
+                  width={512}
+                  height={943}
+                  className="lg:h-[100px] h-[50px] w-full"
+                  alt="TV 3 kanal"
                 ></Image>
               </a>
-              <a href="https://www.kanal2.ee/" className="mr-5 mb-5 lg:mb-0  hover:text-gray-400">
+              <a href="https://www.astrazeneca.com/" target="_blank" className="mr-5 mb-5 lg:mb-0  hover:text-gray-400">
                 <Image
-                src={"./img/logos/astra.svg"}
+                  src={"./img/logos/astra.svg"}
                   className="lg:h-[100px] h-[50px]  w-full"
                   width={188}
                   height={43}
                   alt="Astra"
                 />
               </a>
-              <a href="https://www.bonava.ee/" className="mr-5 mb-5 lg:mb-0  hover:text-gray-400 text-4xl">
-              <Image
-                src={"./img/logos/bonova.svg"}
+              <a href="https://www.bonava.ee/" target="_blank" className="mr-5 mb-5 lg:mb-0  hover:text-gray-400 text-4xl">
+                <Image
+                  src={"./img/logos/bonova.svg"}
                   className="lg:h-[100px] h-[50px] w-full"
                   width={590}
                   height={262}
                   alt="Astra"
                 />
               </a>
-              <a href="https://skechers.ee" className="mr-5 mb-5 lg:mb-0  hover:text-gray-400 text-4xl">
-              <Image
-                src={"./img/logos/skechers.svg"}
+              <a href="https://skechers.ee" target="_blank" className="mr-5 mb-5 lg:mb-0  hover:text-gray-400 text-4xl">
+                <Image
+                  src={"./img/logos/skechers.svg"}
                   className="lg:h-[100px] h-[50px]  w-full"
                   width={475}
                   height={42}
                   alt="Astra"
                 />
               </a>
-              <a href="https://www.excellent.ee/" className="mr-5 mb-5 lg:mb-0  hover:text-gray-400 text-4xl">
-              <Image
-                src={"./img/logos/exc.svg"}
+              <a href="https://www.excellent.ee/" target="_blank" className="mr-5 mb-5 lg:mb-0  hover:text-gray-400 text-4xl">
+                <Image
+                  src={"./img/logos/exc.svg"}
                   className="lg:h-[100px] h-[50px]  w-full"
                   width={475}
                   height={42}
@@ -223,10 +225,10 @@ export default function Home() {
 
 
 
-      </div>
+        </div>
 
-     
-    </section>
+
+      </section>
 
 
 
@@ -234,30 +236,30 @@ export default function Home() {
       <section className="p-8 text-center max-w-screen-lg mx-auto grid sm:grid-cols-2 gap-4 items-center">
         <div>
           <h2
-          className={`${montserrat.className} text-4xl font-semibold text-slate-800`}
+            className={`${montserrat.className} text-4xl font-semibold text-slate-800`}
           >Kes me oleme</h2>
           <p className="mt-2 text-slate-900 text-lg">
             Tänu mitmekesisele kogemusele toitlustuses, ürituste planeerimises ning bankettide, pulmade ja rahvusvaheliste konverentside korraldamises on RM Event teie usaldusväärne partner meeldejäävate ürituste loomisel.
           </p>
         </div>
         <Image
-        src={"/img/team.jpg"}
-        height={780}
-        width={1170}
-        alt="RM Event Team"
-        className="w-full rounded-lg"
+          src={"/img/team.jpg"}
+          height={780}
+          width={1170}
+          alt="RM Event Team"
+          className="w-full rounded-lg"
         />
       </section>
 
       <section className={`${karla.className} p-8 bg-white text-center max-w-screen-lg mx-auto lg:py-16`}>
-        <h2 className={ ` ${montserrat.className} text-4xl font-semibold text-slate-800 mb-8`}>Meie Teenused</h2>
+        <h2 className={` ${montserrat.className} text-4xl font-semibold text-slate-800 mb-8`}>Meie Teenused</h2>
         <div className="grid md:grid-cols-3 gap-6 mt-4">
           <div className="bg-gradient-to-bl from-purple-700 to-blue-800 text-white rounded-lg shadow-lg overflow-hidden">
             <Image
-            src={"/img/banquet.jpg"}
-            width={1200}
-            height={900}
-            alt="Banquet setup"
+              src={"/img/banquet.jpg"}
+              width={1200}
+              height={900}
+              alt="Banquet setup"
             />
             <div className="p-4">
               <h3 className="text-2xl font-bold text-violet-100">Banketid</h3>
@@ -266,11 +268,11 @@ export default function Home() {
           </div>
 
           <div className="bg-gradient-to-bl from-purple-700 to-blue-800 text-white rounded-lg shadow-lg overflow-hidden">
-          <Image
-            src={"/img/wedding.jpg"}
-            width={1200}
-            height={900}
-            alt="Wedding event planning"
+            <Image
+              src={"/img/wedding.jpg"}
+              width={1200}
+              height={900}
+              alt="Wedding event planning"
             />
             <div className="p-4">
               <h3 className="text-2xl font-bold text-violet-100">Pulmad</h3>
@@ -278,11 +280,11 @@ export default function Home() {
             </div>
           </div>
           <div className="bg-gradient-to-bl from-purple-700 to-blue-800 text-white rounded-lg shadow-lg overflow-hidden">
-          <Image
-            src={"/img/events.jpg"}
-            width={1200}
-            height={900}
-            alt="Misc events"
+            <Image
+              src={"/img/events.jpg"}
+              width={1200}
+              height={900}
+              alt="Misc events"
             />
             <div className="p-4">
               <h3 className="text-2xl font-bold text-violet-100">Muud suuremad üritused</h3>
@@ -295,7 +297,7 @@ export default function Home() {
       <section className="p-8 text-center max-w-screen-xl mx-auto grid grid-cols-12 gap-4 items-center">
         <div className="sm:col-span-4 text-center col-span-12 sm:text-left items-center ">
           <h2
-          className={`${montserrat.className} text-4xl font-semibold text-slate-800 `}
+            className={`${montserrat.className} text-4xl font-semibold text-slate-800 `}
           >Üritused</h2>
           <p className="mt-2 text-slate-900 text-lg">
             Siin näited mõndadest üritustest mida oleme korraldanud.
@@ -304,7 +306,7 @@ export default function Home() {
 
         <div className="sm:col-span-8 col-span-12  flex flex-nowrap overflow-x-auto gap-6 snap-mandatory">
           <div className="bg-blue-300 flex-none snap-center snap-always">
-            <Image 
+            <Image
               src={"/img/anne.jpg"}
               width={1080}
               height={1920}
@@ -313,7 +315,7 @@ export default function Home() {
             />
           </div>
           <div className=" flex-none snap-center snap-always">
-          <Image 
+            <Image
               src={"/img/ennuratas.jpg"}
               width={1080}
               height={1920}
@@ -322,7 +324,7 @@ export default function Home() {
             />
           </div>
           <div className="flex-none snap-center snap-always ">
-          <Image 
+            <Image
               src={"/img/lenny.jpg"}
               width={960}
               height={540}
@@ -330,13 +332,13 @@ export default function Home() {
               className=" h-[400px] w-auto"
             />
           </div>
-          
+
 
         </div>
       </section>
 
       <section className="p-8 py-16 text-center">
-        <h2 className={ ` ${montserrat.className} text-4xl font-semibold text-slate-800 mb-8`}>Võtke Meiega Ühendust</h2>
+        <h2 className={` ${montserrat.className} text-4xl font-semibold text-slate-800 mb-8`}>Võtke Meiega Ühendust</h2>
         <p className="mt-2 text-gray-700">Pöörduge meie poole nõu saamiseks ja teeme teie ürituse edukaks!</p>
         <a href="mailto:info@rmevent.ee" className="mt-4 bg-violet-700 text-white px-6 py-2 rounded-lg shadow-md hover:bg-purple-700 inline-block">
           Võta Ühendust
