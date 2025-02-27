@@ -24,37 +24,86 @@ const headerVariants = [
   {
     id: "default",
     bgClass: "bg-gradient-to-bl from-purple-950 to-indigo-900",
-    textColor: "text-white"
+    textColor: "text-white",
+    clientFilter: "",
+    cardBg: "text-white bg-gradient-to-bl from-purple-700 to-blue-800"
   },
   {
     id: "black",
     bgClass: "bg-black",
-    textColor: "text-white"
+    textColor: "text-white",
+     clientFilter: "grayscale",
+      cardBg: "text-slate-800"
   },
   {
     id: "white",
     bgClass: "bg-white",
-    textColor: "text-slate-700"
+    textColor: "text-slate-700",
+     clientFilter: "grayscale",
+      cardBg: "text-slate-800"
   },
   {
     id: "slate",
     bgClass: "bg-gradient-to-bl from-slate-900 to-slate-700",
-    textColor: "text-white"
+    textColor: "text-white",
+     clientFilter: "grayscale",
+      cardBg: "text-slate-900 "
   },
   {
     id: "sunset",
     bgClass: "bg-gradient-to-bl from-red-800 to-orange-500",
-    textColor: "text-white"
+    textColor: "text-white",
+     clientFilter: "grayscale-0",
+      cardBg: "text-violet-900 bg-gradient-to-r from-yellow-100 to-pink-100"
   },
   {
     id: "muu",
     bgClass: "bg-gradient-to-tr from-violet-700 via-blue-800 to-sky-800 relative",
-    textColor: "text-white"
+    textColor: "text-white",
+     clientFilter: "grayscale-0",
+      cardBg: "text-white bg-gradient-to-bl from-purple-700 to-blue-800"
   },
   {
     id: "muu 2",
     bgClass: "bg-gradient-to-tr from-violet-500 to-orange-300",
-    textColor: "text-white"
+    textColor: "text-white",
+     clientFilter: "grayscale-0",
+      cardBg: "text-slate-700 "
+  },
+  {
+    id: "muu 3",
+    bgClass: "bg-gradient-to-bl from-gray-100 to-amber-50",
+    textColor: "text-slate-600",
+     clientFilter: "grayscale",
+      cardBg: "text-slate-700 "
+  },
+  {
+    id: "muu 4",
+    bgClass: "bg-gradient-to-bl from-orange-100 to-amber-50",
+    textColor: "text-slate-600",
+     clientFilter: "grayscale",
+      cardBg: "text-slate-700 "
+  },
+  {
+    id: "muu 5",
+    bgClass: "bg-gradient-to-bl  bg-gradient-to-r from-indigo-200 to-yellow-100",
+    textColor: "text-slate-600",
+     clientFilter: "grayscale-50",
+      cardBg: "text-slate-700 "
+  },
+  {
+    id: "cream 1",
+    bgClass: "bg-[#FFFEF2]",
+    textColor: "text-slate-600",
+     clientFilter: "grayscale-0",
+      cardBg: "text-slate-700 "
+  },
+  {
+    id: "cream 2",
+    bgClass: "bg-[#FFFDD1]",
+    textColor: "text-slate-600",
+     clientFilter: "grayscale-0",
+      cardBg: "text-slate-700 "
   }
 ];
 
@@ -173,21 +222,21 @@ export default function Home() {
           <div className={` ${montserrat.className} px-4 mx-auto text-center uppercase`}
           >
             <span className="mont font-semibold text-gray-400">Meie Kliendid:</span>
-            <div className="flex flex-wrap justify-center items-center mt-8 text-gray-500 sm:justify-between gap-4">
+            <div className={`flex flex-wrap justify-center items-center mt-8 text-gray-500 sm:justify-between gap-4 `}>
               <a href="https://www.tv3.ee/" target="_blank" className="mr-5 mb-5 lg:mb-0  hover:text-gray-400">
 
                 <Image
                   src={"./img/logos/tv3.svg"}
                   width={512}
                   height={943}
-                  className="lg:h-[100px] h-[50px] w-full"
+                  className={`lg:h-[100px] h-[50px] w-full transition-all duration-300 hover:grayscale-0 a ${selectedVariant.clientFilter}`}
                   alt="TV 3 kanal"
                 ></Image>
               </a>
               <a href="https://www.astrazeneca.com/" target="_blank" className="mr-5 mb-5 lg:mb-0  hover:text-gray-400">
                 <Image
                   src={"./img/logos/astra.svg"}
-                  className="lg:h-[100px] h-[50px]  w-full"
+                  className={`lg:h-[100px] h-[50px] w-full transition-all duration-300 hover:grayscale-0 a ${selectedVariant.clientFilter}`}
                   width={188}
                   height={43}
                   alt="Astra"
@@ -196,7 +245,7 @@ export default function Home() {
               <a href="https://www.bonava.ee/" target="_blank" className="mr-5 mb-5 lg:mb-0  hover:text-gray-400 text-4xl">
                 <Image
                   src={"./img/logos/bonova.svg"}
-                  className="lg:h-[100px] h-[50px] w-full"
+                  className={`lg:h-[100px] h-[50px] w-full transition-all duration-300 hover:grayscale-0 a ${selectedVariant.clientFilter}`}
                   width={590}
                   height={262}
                   alt="Astra"
@@ -205,7 +254,7 @@ export default function Home() {
               <a href="https://skechers.ee" target="_blank" className="mr-5 mb-5 lg:mb-0  hover:text-gray-400 text-4xl">
                 <Image
                   src={"./img/logos/skechers.svg"}
-                  className="lg:h-[100px] h-[50px]  w-full"
+                  className={`lg:h-[100px] h-[50px] w-full transition-all duration-300 hover:grayscale-0 a ${selectedVariant.clientFilter}`}
                   width={475}
                   height={42}
                   alt="Astra"
@@ -214,7 +263,7 @@ export default function Home() {
               <a href="https://www.excellent.ee/" target="_blank" className="mr-5 mb-5 lg:mb-0  hover:text-gray-400 text-4xl">
                 <Image
                   src={"./img/logos/exc.svg"}
-                  className="lg:h-[100px] h-[50px]  w-full"
+                  className={`lg:h-[100px] h-[50px] w-full transition-all duration-300 hover:grayscale-0 a ${selectedVariant.clientFilter}`}
                   width={475}
                   height={42}
                   alt="Astra"
@@ -233,7 +282,7 @@ export default function Home() {
 
 
 
-      <section className="p-8 text-center max-w-screen-lg mx-auto grid sm:grid-cols-2 gap-4 items-center">
+      <section className="lg:py-24 p-8 text-center max-w-screen-lg mx-auto grid sm:grid-cols-2 gap-4 items-center">
         <div>
           <h2
             className={`${montserrat.className} text-4xl font-semibold text-slate-800`}
@@ -251,43 +300,43 @@ export default function Home() {
         />
       </section>
 
-      <section className={`${karla.className} p-8 bg-white text-center max-w-screen-lg mx-auto lg:py-16`}>
+      <section className={`${karla.className} p-8 text-center max-w-screen-lg mx-auto lg:py-16`}>
         <h2 className={` ${montserrat.className} text-4xl font-semibold text-slate-800 mb-8`}>Meie Teenused</h2>
         <div className="grid md:grid-cols-3 gap-6 mt-4">
-          <div className="bg-gradient-to-bl from-purple-700 to-blue-800 text-white rounded-lg shadow-lg overflow-hidden">
+          <div className=" rounded-lg shadow-lg overflow-hidden">
             <Image
               src={"/img/banquet.jpg"}
               width={1200}
               height={900}
               alt="Banquet setup"
             />
-            <div className="p-4">
-              <h3 className="text-2xl font-bold text-violet-100">Banketid</h3>
+            <div className={`p-4 h-full ${selectedVariant.cardBg}`}>
+              <h3 className="text-2xl font-bold ">Banketid</h3>
               <p className="mt-2">Elegantsed ja hästi korraldatud banketid igaks sündmuseks.</p>
             </div>
           </div>
 
-          <div className="bg-gradient-to-bl from-purple-700 to-blue-800 text-white rounded-lg shadow-lg overflow-hidden">
+          <div className="  rounded-lg shadow-lg overflow-hidden">
             <Image
               src={"/img/wedding.jpg"}
               width={1200}
               height={900}
               alt="Wedding event planning"
             />
-            <div className="p-4">
-              <h3 className="text-2xl font-bold text-violet-100">Pulmad</h3>
+            <div className={`p-4 h-full ${selectedVariant.cardBg}`}>
+              <h3 className="text-2xl font-bold">Pulmad</h3>
               <p className="mt-2">Teie erilise päeva unustamatuks muutmine laitmatu planeerimisega.</p>
             </div>
           </div>
-          <div className="bg-gradient-to-bl from-purple-700 to-blue-800 text-white rounded-lg shadow-lg overflow-hidden">
+          <div className="rounded-lg shadow-lg overflow-hidden">
             <Image
               src={"/img/events.jpg"}
               width={1200}
               height={900}
               alt="Misc events"
             />
-            <div className="p-4">
-              <h3 className="text-2xl font-bold text-violet-100">Muud suuremad üritused</h3>
+            <div className={`p-4 h-full ${selectedVariant.cardBg}`}>
+              <h3 className="text-2xl font-bold">Muud suuremad üritused</h3>
               <p className="mt-2">Sujuv sündmuste koordineerimine suuremahuliste ürituste jaoks.</p>
             </div>
           </div>
