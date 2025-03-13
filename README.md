@@ -12,10 +12,10 @@ The project is designed to be **lightweight, flexible and scalable**, with a hea
 - Expandable with an integrated calendar for future bookings  
 
 ### **Non-Functional Requirements**  
-- 🏃‍♀️ Load under **1.5s** on modern devices, good network conditions, for clients located in eastern and central europe.
-- ⬇️ Initial download under **1MB** (rest lazy-loaded)  
-- 🔍 Implement **best-practice SEO optimizations**  
-- 🔧 Run on a **VPS with 1 vCore, 2GB RAM**  
+- Load under **1.5s** on modern devices, good network conditions, for clients located in eastern and central europe.
+- Initial download under **1MB** (rest lazy-loaded)  
+- Implement **best-practice SEO optimizations**  
+- Run on a **VPS with 1 vCore, 2GB RAM**  
 
 For these quite strict performance requirements I decided not to use **WordPress** and go with a flexible and expandable combo:
 - **Next.js** → Server-side rendering (SSR) for speed & SEO  
